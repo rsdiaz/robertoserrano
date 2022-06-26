@@ -11,7 +11,7 @@ const LastPosts = (props: RecentPostsProps) => (
     title={
       <div className="flex items-baseline justify-between">
         <div>
-          Recent <GradientText>Posts</GradientText>
+          Últimos <GradientText>Posts</GradientText>
         </div>
 
         <div className="text-sm">

@@ -1,12 +1,5 @@
-import {
-  NavbarTwoColumns,
-  NavMenuItem,
-  Section,
-} from 'astro-boilerplate-components'
+import { Logo, Icon, NavMenu, NavMenuItem, NavbarTwoColumns, Section } from '@/components'
 
-import { Logo } from '@/components/Logo'
-import { Icon } from '@/components/Icon'
-import { NavMenu } from '@/components/NavMenu'
 
 const Navbar = () => (
   <Section>
@@ -20,7 +13,7 @@ const Navbar = () => (
 
       <NavMenu>
         <NavMenuItem href="/posts">Blogs</NavMenuItem>
-        <NavMenuItem href="/">GitHub</NavMenuItem>
+        <NavMenuItem href="https://github.com/rsdiaz">GitHub</NavMenuItem>
         <NavMenuItem href="/">Twitter</NavMenuItem>
       </NavMenu>
     </NavbarTwoColumns>

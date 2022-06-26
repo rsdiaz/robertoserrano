@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro"
 import { Hero } from '@/partials/Hero'
 import { LastPosts } from '@/partials/LastPosts'
+import { ProjectList } from '@/partials/ProjectList'
 import { AppConfig } from '@/utils/AppConfig'
 
 const { title } = AppConfig
@@ -12,4 +13,5 @@ const { description } = AppConfig
 <Base head={{ title, description }}>
 <Hero />
 <LastPosts />
+<ProjectList />
 </Base>

@@ -12,12 +12,12 @@ const Hero = () => {
         description={
           <>
             Apasionado de las tecnologías web, el desarrollo y la seguridad informática.{' '}
-            <a className="text-amber-500 hover:underline" href="/">
+            <a className="text-amber-300 hover:underline" href="/">
               Entusiasta
             </a>{' '}
             de HTML, CSS, JavaScript, Node.{' '}
             Comparto mi aprendizaje y conocimiento a traves de mi{' '}
-            <a className="text-amber-500 hover:underline" href="/posts">
+            <a className="text-amber-300 hover:underline" href="/posts">
               blog
             </a>{' '}
             en el cual publico artículos sobre desarrollo web y mi día a día tecnológico.
@@ -27,7 +27,7 @@ const Hero = () => {
           <>
             <img
               className="h-60 w-64 rounded-full"
-              src="/assets/images/avatar.png"
+              src="/assets/images/roberto_serrano_desarrollo_web.jpg"
               alt="Avatar image"
               loading="lazy"
             />

@@ -1,0 +1,38 @@
+---
+//** Layout Import */
+import PostLayout from '@/layouts/PostLayout.astro'
+import { AppConfig } from '@/utils/AppConfig'
+
+export type Post = {
+  tags: string[],
+  slug: string,
+  publishDate: Date,
+  title: string,
+}
+
+export const getStaticPaths = async () => {
+  const allPosts = await Astro.glob<Post>('../../../posts/*.md')
+  let allSortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime() - new Date(a.frontmatter.publishDate).getTime());
+
+  return allSortedPosts.map((post) => {
+    return {
+      params: { slug: post.frontmatter.slug },
+      props: { ...post }
+    }
+  })
+}
+
+const content = Astro.props
+const { Content } = content
+const titleSufix = ` - ${AppConfig.site_name}`
+const titleBase = content.frontmatter.title
+const title = titleBase + titleSufix
+const description = content.frontmatter.description
+---
+
+<PostLayout content={{ title, description }}>
+  <a href={content.frontmatter.slug}>
+    <h1>{content.frontmatter.title}</h1>
+  </a>
+  <Content />
+</PostLayout>

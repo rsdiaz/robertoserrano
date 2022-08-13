@@ -1,0 +1,48 @@
+---
+//** Type Imports */
+import { Post } from '../../components/types/Post'
+// Layout Import
+import PostLayout from '@/layouts/PostLayout.astro'
+
+type Tag = {
+  slug: string
+  description?: string
+}
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob<Post>('../../posts/*.md')
+  const allTags: Tag[] = []
+
+  allPosts.map(post => {
+    post.frontmatter.tags && post.frontmatter.tags.map(tag => {
+      const newTag: Tag = { slug: tag.toLocaleLowerCase(), description: undefined }
+      allTags.push(newTag)
+    })
+  })
+
+  console.log(allTags)
+
+  return Array.from(allTags).map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag.slug))
+    return {
+      params: { tag: tag.slug },
+      props: {
+        page: filteredPosts,
+        tagDescription: tag.description
+      }
+    };
+  });
+}
+/* const { page } = Astro.props
+const { tag } = Astro.request.params */
+const content = Astro.props
+let title = `Posts by Tag:`
+let description = `all of the articles we've posted and linked so far under the tag:`
+console.log(content)
+---
+
+<PostLayout content={{ title, description }}>
+  <h1 class="font-size-3">{title}</h1>
+  <!-- <Pagination page={page} /> -->
+  <!-- <p><i>page 1 of 1 (I don't have pagination yet 🤷🏻‍♂️)</i></p> -->
+</PostLayout>

@@ -1,0 +1,23 @@
+---
+import { Footer } from '@/partials/Footer'
+import { Navbar } from '@/partials/Navbar'
+import BaseHead from '@/layouts/BaseHead.astro'
+
+const { content } = Astro.props
+
+const { title, description } = content
+---
+
+<html lang="es">
+
+<head>
+  <BaseHead head={{ title, description }} />
+</head>
+
+<body class='bg-gray-900 text-gray-100'>
+  <Navbar />
+  <slot />
+  <Footer />
+</body>
+
+</html>

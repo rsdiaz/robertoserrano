@@ -1,0 +1,29 @@
+---
+import PostLayout from '@/layouts/PostLayout.astro'
+import { Section, PageHeader, PostCard } from '@/components'
+
+export type Post = {
+  slug: string,
+  publishDate: Date,
+  title: string,
+  tags: string[]
+}
+const posts = await Astro.glob<Post>('../../posts/*.md')
+
+const title = 'blog'
+const description = 'Apasionado de las tecnologías web, el desarrollo y la seguridad informática. Entusiasta de HTML, CSS, JavaScript, Node. Comparto mi aprendizaje y conocimiento a traves de mi blog en el cual publico artículos sobre desarrollo web y mi día a día tecnológico.'
+---
+
+<PostLayout content={{ title: 'asass' , description: 'saaaa' }}>
+  <Section>
+    <PageHeader title={title} description={description} />
+  </Section>
+  <Section>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map((post) => (
+      <PostCard title={post.frontmatter.title} slug={post.frontmatter.slug} tags={post.frontmatter.tags}
+        publishDate={post.frontmatter.publishDate} />
+      ))}
+    </div>
+  </Section>
+</PostLayout>

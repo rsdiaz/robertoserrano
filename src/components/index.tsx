@@ -8,6 +8,8 @@ import { NavMenu } from './NavMenu'
 import { NavMenuItem } from './NavMenuItem'
 import { NavbarTwoColumns } from './NavbarTwoColumns'
 import { Section } from './Section'
+import { PageHeader } from './PageHeader'
+import { PostCard } from './PostCard'
 
 export {
   FooterCopyright,
@@ -19,5 +21,7 @@ export {
   NavbarTwoColumns,
   NavMenuItem,
   NavMenu,
-  Section
+  Section,
+  PageHeader,
+  PostCard
 }

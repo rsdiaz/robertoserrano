@@ -6,7 +6,7 @@ const Navbar = () => (
     <NavbarTwoColumns>
       <a href="/">
         <Logo
-          icon={<Icon width='28' color='#22d3ee' />}
+          icon={<Icon width='28' color='rgb(192 38 211)' />}
           name="Roberto Serrano | Web Developer"
         />
       </a>

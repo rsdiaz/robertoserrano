@@ -1,3 +1,4 @@
+import { formatDate } from '@/utils/FormatDate'
 import type { Post } from './types/Post'
 
 const PostCard = (props: Post) => (
@@ -20,7 +21,7 @@ const PostCard = (props: Post) => (
 
       <div className="p-4 flex flex-col justify-between" style={{ minHeight: '198px' }}>
         <p>
-          <time className="tracking-widest text-xs title-font text-gray-400 mb-1">{new Date(props.publishDate).toLocaleDateString('es')}</time>
+          <time className="tracking-widest text-xs title-font text-gray-400 mb-1">{formatDate(props.publishDate)}</time>
         </p>
         <h1 className="title-font text-lg font-medium mb-3">{props.title}</h1>
         <div className="flex items-center flex-wrap ">

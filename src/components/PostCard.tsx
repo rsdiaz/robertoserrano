@@ -16,7 +16,7 @@ const PostCard = (props: Post) => (
           </div>
         </div>
       </div>
-      <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://firebasestorage.googleapis.com/v0/b/thecaffeinecode.appspot.com/o/blog.jpg?alt=media&token=271cb624-94d4-468d-a14d-455377ba75c2"
+      <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={props.imgSrc}
         alt="blog cover" />
 
       <div className="p-4 flex flex-col justify-between" style={{ minHeight: '198px' }}>

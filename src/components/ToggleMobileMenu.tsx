@@ -1,0 +1,13 @@
+type ToggleMobileMenuProps = {
+  handleMobileNav: any
+}
+
+const ToggleMobileMenu = (props: ToggleMobileMenuProps) => (
+  <div className='absolute right-0 top-0 p-2 md:hidden' onClick={() => props.handleMobileNav()}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-primary">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  </div>
+)
+
+export { ToggleMobileMenu }

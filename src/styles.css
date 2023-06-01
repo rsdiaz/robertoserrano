@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-weight: 300;
+}
+
+header.hide {
+  transform: translateY(-120px);
+}
+
+header.compaq {
+  background-color: #1d293a;
+}
+
+.background-animate {
+  background-size: 400%;
+
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+}
+
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 100%;
+  }
+
+  50% {
+    background-position: 0%;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block py-1.5 px-6 border-2 border-primary bg-primary font-semibold text-main rounded
+  }
+  .btn-outlined {
+    @apply inline-block py-1.5 px-6 border-2 border-primary rounded;
+  }
+  .card-base {
+    @apply  p-8 w-full rounded-lg
+  }
+  .card-primary {
+    @apply  p-8 w-full bg-[#1e293b] rounded-lg shadow-lg
+  }
+  .card-secondary {
+    @apply  p-8 w-full bg-[#131c2b] rounded-lg shadow-lg
+  }
+  .site-section-tag {
+    @apply py-1 px-6 inline font-bold uppercase text-center bg-screen-secondary rounded lg:rotate-[-90deg] hover:text-primary;
+  }
+  .post p {
+    @apply mb-4
+  }
+  .post a {
+    @apply underline
+  }
+  .post a:hover {
+    @apply text-primary
+  }
+  .post h2 {
+    @apply mb-4 mt-8 text-2xl
+  }
+  .post ul {
+    @apply mb-4 list-disc list-inside font-light
+  }
+  .post pre {
+    @apply mb-4 p-4 !bg-[#131c2b] text-sm rounded shadow-lg
+  }
+}

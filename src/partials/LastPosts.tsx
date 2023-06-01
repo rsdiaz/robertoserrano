@@ -1,28 +1,16 @@
-import type { MarkdownInstance } from 'astro';
-import { GradientText, PostCard, Section } from '@/components';
-import { Post } from '@/components/types/Post';
-import { BlogGallery } from '@/components/BlogGallery';
+import type { MarkdownInstance } from 'astro'
+import { HomeSection } from '@/components'
+import { Post } from '@/components/types/Post'
+import { BlogGallery } from '@/components/BlogGallery'
 
 type RecentPostsProps = {
-  postList: MarkdownInstance<Post>[];
-};
+  postList: MarkdownInstance<Post>[]
+}
 
 const LastPosts = (props: RecentPostsProps) => (
-  <Section
-    title={
-      <div className="flex items-baseline justify-between">
-        <div>
-          Últimos <GradientText>Posts</GradientText>
-        </div>
-
-        <div className="text-sm">
-          <a href="/posts">Ver todos los posts →</a>
-        </div>
-      </div>
-    }
-  >
+  <HomeSection id='blog' title='Últimos posts' titlePosition='left'>
     <BlogGallery postList={props.postList} />
-  </Section>
-);
+  </HomeSection>
+)
 
-export { LastPosts };
+export { LastPosts }

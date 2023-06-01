@@ -1,38 +1,53 @@
 ---
+import '@/styles.css'
 //** Layout Import */
-import PostLayout from '@/layouts/PostLayout.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
 import { AppConfig } from '@/utils/AppConfig'
+import { PostHeader } from '@/partials/PostHeader'
+import { PostFooter } from '@/partials/PostFooter'
 
 export type Post = {
-  tags: string[],
-  slug: string,
-  publishDate: Date,
-  title: string,
+  tags: string[]
+  slug: string
+  publishDate: Date
+  title: string
 }
 
 export const getStaticPaths = async () => {
-  const allPosts = await Astro.glob<Post>('../../../posts/*.md')
-  let allSortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime() - new Date(a.frontmatter.publishDate).getTime());
+  const allPosts = await Astro.glob<Post>('../../../posts/*.mdx')
+  let allSortedPosts = allPosts.sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishDate).getTime() -
+      new Date(a.frontmatter.publishDate).getTime()
+  )
 
   return allSortedPosts.map((post) => {
     return {
       params: { slug: post.frontmatter.slug },
-      props: { ...post }
+      props: { post },
     }
   })
 }
 
 const content = Astro.props
-const { Content } = content
+const { Content } = content.post
 const titleSufix = ` - ${AppConfig.site_name}`
-const titleBase = content.frontmatter.title
+const titleBase = content.post.frontmatter.title
 const title = titleBase + titleSufix
-const description = content.frontmatter.description
+const description = 'ss'
 ---
 
-<PostLayout content={{ title, description }}>
-  <a href={content.frontmatter.slug}>
-    <h1>{content.frontmatter.title}</h1>
-  </a>
-  <Content />
-</PostLayout>
+<PageLayout content={{ title, description }}>
+  <article class='mx-auto max-w-screen-lg py-6'>
+    <PostHeader
+      title={content.post.frontmatter.title}
+      date={content.post.frontmatter.publishDate}
+      tags={content.post.frontmatter.tags}
+      img={content.post.frontmatter.imgSrc}
+    />
+    <main class='post'>
+      <Content />
+    </main>
+    <PostFooter />
+  </article>
+</PageLayout>

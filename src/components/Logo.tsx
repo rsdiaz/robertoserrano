@@ -2,12 +2,12 @@ import type { ReactNode } from "react"
 
 type LogoProps = {
   icon: ReactNode
-  name: string
+  name?: string
 }
 
 const Logo = (props: LogoProps) => {
   return (
-    <div className="flex items-center bg-gradient-to-r from-fuchsia-600 bg-amber-300 bg-clip-text text-xl font-bold text-transparent font-outfit background-animate">
+    <div className="flex items-center bg-gradient-to-r from-fuchsia-600 bg-amber-300 bg-clip-text text-xl font-bold text-transparent font-dosis background-animate">
       {props.icon}
       <span className="w-2"></span>
       {props.name}

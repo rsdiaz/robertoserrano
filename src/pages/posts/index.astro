@@ -1,20 +1,38 @@
 ---
-import PostLayout from '@/layouts/PostLayout.astro'
-import { Section, PageHeader } from '@/components'
-import { BlogGallery } from '@/components/BlogGallery'
-import { Post } from '@/components/types/Post'
+// Type Imports
+import { Post } from '../../components/types/Post'
+// Layout Import
+import PageLayout from '@/layouts/PageLayout.astro'
 
-const posts = await Astro.glob<Post>('../../posts/*.md')
+// Partials Imports
+import { PageHeader } from '@/partials/PageHeader'
+import { PostsList } from '@/partials/PostsList'
+import { Sidebar } from '@/partials/Sidebar'
+import { PageFooter } from '@/partials/PageFooter'
 
-const title = 'blog'
-const description = 'Apasionado de las tecnologías web, el desarrollo y la seguridad informática. Entusiasta de HTML, CSS, JavaScript, Node. Comparto mi aprendizaje y conocimiento a traves de mi blog en el cual publico artículos sobre desarrollo web y mi día a día tecnológico.'
+// Utils Imports
+import { getUniqueTags } from '@/utils/GetUniqueTags'
+
+// Styles Imports
+import '@/styles.css'
+
+const posts = await Astro.glob<Post>('../../posts/*.mdx')
+
+const tags = getUniqueTags(posts.map((e) => e.frontmatter.tags))
+const title = 'Bienvenidos a mi blog 👋'
+const description =
+  'Apasionado de las tecnologías web, el desarrollo y la seguridad informática. Entusiasta de HTML, CSS, JavaScript, Node. Comparto mi aprendizaje y conocimiento a traves de mi blog en el cual publico artículos sobre desarrollo web y mi día a día tecnológico.'
 ---
 
-<PostLayout content={{ title: 'asass' , description: 'saaaa' }}>
-  <Section>
-    <PageHeader title={title} description={description} />
-  </Section>
-  <Section>
-    <BlogGallery postList={posts} />
-  </Section>
-</PostLayout>
+<PageLayout content={{ title: 'Blog', description: 'saaaa' }}>
+  <PageHeader title={title} description={description} />
+  <section class='md:grid md:grid-cols-3 gap-8'>
+    <div class='col-span-2'>
+      <PostsList posts={posts} />
+    </div>
+    <aside>
+      <Sidebar tags={tags} />
+    </aside>
+  </section>
+  <PageFooter />
+</PageLayout>

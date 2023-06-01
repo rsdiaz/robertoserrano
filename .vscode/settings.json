@@ -3,5 +3,8 @@
     "activityBar.background": "#153507",
     "titleBar.activeBackground": "#1D4A09",
     "titleBar.activeForeground": "#F5FDF1"
+  },
+  "files.associations": {
+    "*.mdx": "markdown"
   }
 }

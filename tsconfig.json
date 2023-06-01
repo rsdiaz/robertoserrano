@@ -30,8 +30,10 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
+    "extends": "astro/tsconfigs/base",
     "types": [
-      "vite/client"
+      "vite/client",
+      "astro/client"
     ],
     "baseUrl": ".",
     "paths": {

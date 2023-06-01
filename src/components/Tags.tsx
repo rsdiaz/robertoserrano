@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
 
 import type { Values } from './types/TypeUnion'
 
@@ -25,12 +25,17 @@ export const ColorTags = {
   FUCHSIA: 'FUCHSIA',
   PINK: 'PINK',
   ROSE: 'ROSE',
-} as const;
+  NODEJS: 'nodejs',
+  DOCKER: 'docker',
+  REACT: 'react',
+  ASTRO: 'astro',
+} as const
 
 type ITagsProps = {
-  color: Values<typeof ColorTags>;
-  children: ReactNode;
-};
+  color: Values<typeof ColorTags>
+  href?: string
+  children: ReactNode
+}
 
 const colorToClassMap = {
   [ColorTags.SLATE]: 'bg-slate-400 text-slate-900',
@@ -41,9 +46,13 @@ const colorToClassMap = {
   [ColorTags.RED]: 'bg-red-400 text-red-900',
   [ColorTags.ORANGE]: 'bg-orange-400 text-orange-900',
   [ColorTags.AMBER]: 'bg-amber-400 text-amber-900',
-  [ColorTags.YELLOW]: 'bg-yellow-400 text-yellow-900',
+  [ColorTags.YELLOW]: 'bg-primary text-yellow-900',
   [ColorTags.LIME]: 'bg-lime-400 text-lime-900',
-  [ColorTags.GREEN]: 'bg-green-400 text-green-900',
+  [ColorTags.GREEN]: 'bg-lime-400 text-lime-900',
+  [ColorTags.NODEJS]: 'bg-[#339933] text-green-900 hover:text-slate-800',
+  [ColorTags.DOCKER]: 'bg-[#2496ED] text-blue-900 hover:text-slate-800',
+  [ColorTags.REACT]: 'bg-[#61DAFB] text-blue-900 hover:text-slate-800',
+  [ColorTags.ASTRO]: 'bg-[#FF5D01] text-slate-700 hover:text-slate-800',
   [ColorTags.EMERALD]: 'bg-emerald-400 text-emerald-900',
   [ColorTags.TEAL]: 'bg-teal-400 text-teal-900',
   [ColorTags.CYAN]: 'bg-cyan-400 text-cyan-900',
@@ -55,15 +64,17 @@ const colorToClassMap = {
   [ColorTags.FUCHSIA]: 'bg-fuchsia-400 text-fuchsia-900',
   [ColorTags.PINK]: 'bg-pink-400 text-pink-900',
   [ColorTags.ROSE]: 'bg-rose-400 text-rose-900',
-};
+}
 
 const Tags = (props: ITagsProps) => (
-  <div
-    className={`rounded-md px-2 py-1 text-xs font-semibold ${colorToClassMap[props.color]
-      }`}
+  <a
+    href={props.href}
+    className={`rounded-md px-2 py-1 text-xs font-semibold ${
+      colorToClassMap[props.color]
+    }`}
   >
     {props.children}
-  </div>
-);
+  </a>
+)
 
 export { Tags }

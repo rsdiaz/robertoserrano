@@ -3,13 +3,13 @@ import { AppConfig } from '@/utils/AppConfig'
 
 export interface Props {
   head: {
-    title: string,
+    title: string
     description: string
   }
 }
 
 const {
-  head: { title, description }
+  head: { title, description },
 } = Astro.props as Props
 ---
 
@@ -19,12 +19,26 @@ const {
 <meta name='description' content={description} />
 <meta name='author' content={AppConfig.author} />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Outfit&display=swap" rel="stylesheet">
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link
+  href='https://fonts.googleapis.com/css2?family=Outfit&display=swap'
+  rel='stylesheet'
+/>
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link
+  href='https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap'
+  rel='stylesheet'
+/>
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link
+  href='https://fonts.googleapis.com/css2?family=Dosis&display=swap'
+  rel='stylesheet'
+/>
 
 <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
 <link rel='icon' type='image/x-icon' href='/favicon.ico' />

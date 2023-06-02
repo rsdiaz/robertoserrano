@@ -1,5 +1,3 @@
-import Typography from '../components/ui/Text'
-
 type PageHeaderProps = {
   title: string
   description: string
@@ -7,9 +5,7 @@ type PageHeaderProps = {
 
 const PageHeader = (props: PageHeaderProps) => (
   <header className='mb-16'>
-    <Typography as='h1' size='4xl' className='font-bold text-slate-300'>
-      {props.title}
-    </Typography>
+    <h1 className='text-4xl font-bold text-slate-300'>{props.title}</h1>
     <p className='pt-4'>{props.description}</p>
   </header>
 )

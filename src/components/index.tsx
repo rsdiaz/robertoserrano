@@ -1,7 +1,6 @@
 import { FooterCopyright } from './FooterCopyright'
 import { Icon } from './BrandIcon'
 import { Logo } from './Logo'
-import { PostCard } from './PostCard'
 import { FollowCard } from './FollowCard'
 import { ToggleMobileMenu } from './ToggleMobileMenu'
 import { HomeSection } from './Shared/HomeSection'
@@ -12,7 +11,6 @@ import { SkillContent } from './Skills/SkillContent'
 import { PortfolioContent } from './Portfolio/PortfolioContent'
 import { PortfolioCard } from './PortfolioCard'
 import { SmallCard } from './SmallCard'
-
 import { GitHubIcon } from './icons/GitHubIcon'
 import { CodePenIcon } from './icons/CodePenIcon'
 import { LinkedInIcon } from './icons/LinkedInIcon'
@@ -22,7 +20,6 @@ export {
   FooterCopyright,
   Icon,
   Logo,
-  PostCard,
   FollowCard,
   ToggleMobileMenu,
   HomeSection,
@@ -36,5 +33,5 @@ export {
   GitHubIcon,
   CodePenIcon,
   LinkedInIcon,
-  TwitterIcon
+  TwitterIcon,
 }

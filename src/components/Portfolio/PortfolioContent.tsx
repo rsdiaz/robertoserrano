@@ -13,6 +13,8 @@ const PortfolioContent = () => {
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         {projects.map((project) => (
           <PortfolioCard
+            id={project.id}
+            key={project.id}
             title={project.title}
             description={project.description}
             links={project.links}
@@ -22,6 +24,8 @@ const PortfolioContent = () => {
         ))}
         {projects.map((project) => (
           <SmallCard
+            id={project.id}
+            key={project.id}
             title={project.title}
             description={project.description}
             links={project.links}

@@ -30,7 +30,7 @@ const CardMeta = (props: PostListProps) => (
     <div className='flex items-center gap-1'>
       <small className='text-slate-400'>Tags:</small>
       {props.post.frontmatter.icons.map((e: any) => (
-        <p>
+        <p key={e}>
           <Icon name={e} width='16' />
         </p>
       ))}

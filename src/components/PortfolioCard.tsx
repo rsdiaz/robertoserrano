@@ -12,7 +12,11 @@ const PortfolioCard = (props: Project) => {
       onMouseLeave={() => setIsHover(false)}
     >
       {props.image && (
-        <section className={`${isHover ? 'grayscale-0' : 'grayscale'} ease-in duration-300`}>
+        <section
+          className={`${
+            isHover ? 'grayscale-0' : 'grayscale'
+          } ease-in duration-300`}
+        >
           <img
             src={props.image}
             alt='author'
@@ -40,7 +44,7 @@ const PortfolioCard = (props: Project) => {
           </ul>
           <ul className='flex gap-3 font-thin'>
             {props.tags.map((tag) => (
-              <li>{tag}</li>
+              <li key={tag}>{tag}</li>
             ))}
           </ul>
         </footer>

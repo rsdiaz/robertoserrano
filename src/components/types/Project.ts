@@ -4,6 +4,7 @@ type ProjectLink = {
 }
 
 export type Project = {
+  id: number
   title: string
   description: string
   links: ProjectLink[]

@@ -10,7 +10,13 @@ import {
   NextIcon,
   AstroIcon,
   PhpIcon,
-  PythonIcon
+  PythonIcon,
+  GitHubIcon,
+  BashIcon,
+  DockerIcon,
+  SwaggerIcon,
+  AlgoliaIcon,
+  StrapiIcon,
 } from '@/components/icons'
 
 const skills: Skill[] = [
@@ -40,7 +46,7 @@ const skills: Skill[] = [
     type: 'programación',
     icon: <PythonIcon />,
     color: '#3776AB',
-    borderColor: 'border-[#3776AB]'
+    borderColor: 'border-[#3776AB]',
   },
   {
     name: 'Node.js',
@@ -83,6 +89,48 @@ const skills: Skill[] = [
     icon: <AstroIcon />,
     color: '#FF5D01',
     borderColor: 'border-[#FF5D01]',
+  },
+  {
+    name: 'GitHub',
+    type: 'tools',
+    icon: <GitHubIcon />,
+    color: '#181717',
+    borderColor: 'border-[#181717]',
+  },
+  {
+    name: 'Bash',
+    type: 'tools',
+    icon: <BashIcon />,
+    color: '#4EAA25',
+    borderColor: 'border-[#4EAA25]',
+  },
+  {
+    name: 'Docker',
+    type: 'tools',
+    icon: <DockerIcon />,
+    color: '#2496ED',
+    borderColor: 'border-[#2496ED]',
+  },
+  {
+    name: 'Swagger',
+    type: 'tools',
+    icon: <SwaggerIcon />,
+    color: '#85EA2D',
+    borderColor: 'border-[#85EA2D]',
+  },
+  {
+    name: 'Algolia',
+    type: 'others',
+    icon: <AlgoliaIcon />,
+    color: '#003DFF',
+    borderColor: 'border-[#003DFF]',
+  },
+  {
+    name: 'Strapi',
+    type: 'others',
+    icon: <StrapiIcon />,
+    color: '#2F2E8B',
+    borderColor: 'border-[#2F2E8B]',
   },
 ]
 

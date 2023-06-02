@@ -12,7 +12,11 @@ import { NextIcon } from './NextIcon'
 import { AstroIcon } from './AstroIcon'
 import { PhpIcon } from './PhpIcon'
 import { PythonIcon } from './PythonIcon'
-
+import { BashIcon } from './BashIcon'
+import { DockerIcon } from './DockerIcon'
+import { SwaggerIcon } from './SwaggerIcon'
+import { AlgoliaIcon } from './AlgoliaIcon'
+import { StrapiIcon } from './StrapiIcon'
 
 export {
   GitHubIcon,
@@ -28,5 +32,10 @@ export {
   NextIcon,
   AstroIcon,
   PhpIcon,
-  PythonIcon
+  PythonIcon,
+  BashIcon,
+  DockerIcon,
+  SwaggerIcon,
+  AlgoliaIcon,
+  StrapiIcon,
 }

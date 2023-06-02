@@ -4,7 +4,7 @@ const GitHubIcon = (props: Icon) => (
   <svg
     className='fill-current ease-in duration-200'
     viewBox='0 0 128 128'
-    width={props.width ?? '1rem'}
+    width={props.width ?? '32'}
   >
     <g>
       <path

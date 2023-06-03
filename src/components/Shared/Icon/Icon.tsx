@@ -9,6 +9,7 @@ export type Icons =
   | 'codepen'
   | 'linkedin'
   | 'twitter'
+  | 'algolia'
 
 type IconOwnProps = {
   name: Icons

@@ -120,7 +120,7 @@ const skills: Skill[] = [
   {
     name: 'Algolia',
     type: 'others',
-    icon: <AlgoliaIcon />,
+    icon: <Icon name='algolia' />,
     color: '#003DFF',
     borderColor: 'border-[#003DFF]',
   },

@@ -10,6 +10,7 @@ export type Icons =
   | 'linkedin'
   | 'twitter'
   | 'algolia'
+  | 'strapi'
 
 type IconOwnProps = {
   name: Icons

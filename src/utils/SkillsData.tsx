@@ -13,8 +13,6 @@ import {
   BashIcon,
   DockerIcon,
   SwaggerIcon,
-  AlgoliaIcon,
-  StrapiIcon,
 } from '@/components/icons'
 import Icon from '@/components/Shared/Icon/Icon'
 
@@ -127,7 +125,7 @@ const skills: Skill[] = [
   {
     name: 'Strapi',
     type: 'others',
-    icon: <StrapiIcon />,
+    icon: <Icon name='strapi' />,
     color: '#2F2E8B',
     borderColor: 'border-[#2F2E8B]',
   },

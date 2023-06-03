@@ -10,7 +10,6 @@ import { PythonIcon } from './PythonIcon'
 import { BashIcon } from './BashIcon'
 import { DockerIcon } from './DockerIcon'
 import { SwaggerIcon } from './SwaggerIcon'
-import { StrapiIcon } from './StrapiIcon'
 
 export {
   JavaScriptIcon,
@@ -25,5 +24,4 @@ export {
   BashIcon,
   DockerIcon,
   SwaggerIcon,
-  StrapiIcon,
 }

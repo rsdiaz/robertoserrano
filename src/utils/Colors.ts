@@ -6,5 +6,6 @@ export const Colors = {
   codepen: '#000000',
   linkedin: '#0A66C2',
   twitter: '#1DA1F2',
-  algolia: '#003DFF'
+  algolia: '#003DFF',
+  strapi: '#2F2E8B',
 }

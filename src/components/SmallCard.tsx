@@ -1,5 +1,5 @@
-import { GitHubIcon } from './icons'
 import { Project } from './types/Project'
+import Icon from './Shared/Icon/Icon'
 
 const SmallCard = (props: Project) => (
   <article className='flex flex-col bg-screen-secondary rounded'>
@@ -12,12 +12,12 @@ const SmallCard = (props: Project) => (
         <ul className='flex gap-3 mb-4'>
           <li>
             <a href='https://' className='text-zinc-400 hover:text-cyan-400'>
-              <GitHubIcon width='1.5rem' />
+              <Icon name='github' width='1.5rem' />
             </a>
           </li>
           <li>
             <a href='https://' className='text-zinc-400 hover:text-cyan-400'>
-              <GitHubIcon width='1.5rem' />
+              <Icon name='github' width='1.5rem' />
             </a>
           </li>
         </ul>

@@ -1,5 +1,5 @@
 import { ColorTags } from '@/components/Tags'
-import { Icons } from '../Shared/Icon'
+import { Icons } from '../Shared/Icon/Icon'
 import { Values } from './TypeUnion'
 
 export type Post = {

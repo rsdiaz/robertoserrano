@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { GitHubIcon } from './icons'
+
 import { Project } from './types/Project'
 
 const PortfolioCard = (props: Project) => {
@@ -33,12 +33,12 @@ const PortfolioCard = (props: Project) => {
           <ul className='flex gap-3 mb-4'>
             <li>
               <a href='https://' className='text-zinc-400 hover:text-cyan-400'>
-                <GitHubIcon width='1.5rem' />
+                {/* <GitHubIcon width='1.5rem' /> */}
               </a>
             </li>
             <li>
               <a href='https://' className='text-zinc-400 hover:text-cyan-400'>
-                <GitHubIcon width='1.5rem' />
+                {/* <GitHubIcon width='1.5rem' /> */}
               </a>
             </li>
           </ul>

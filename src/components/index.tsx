@@ -11,8 +11,6 @@ import { SkillContent } from './Skills/SkillContent'
 import { PortfolioContent } from './Portfolio/PortfolioContent'
 import { PortfolioCard } from './PortfolioCard'
 import { SmallCard } from './SmallCard'
-import { GitHubIcon } from './icons/GitHubIcon'
-import { CodePenIcon } from './icons/CodePenIcon'
 import { LinkedInIcon } from './icons/LinkedInIcon'
 import { TwitterIcon } from './icons/TwitterIcon'
 
@@ -30,8 +28,6 @@ export {
   PortfolioContent,
   PortfolioCard,
   SmallCard,
-  GitHubIcon,
-  CodePenIcon,
   LinkedInIcon,
   TwitterIcon,
 }

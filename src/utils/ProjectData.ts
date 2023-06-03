@@ -2,6 +2,7 @@ import { Project } from "@/components/types/Project"
 
 const projects: Project[] = [
   {
+    id: 1,
     title: 'node-clima',
     description: 'Modulo para nodejs',
     image:
@@ -19,6 +20,7 @@ const projects: Project[] = [
     tags: ['nodejs', 'mongodb'],
   },
   {
+    id: 2,
     title: 'typescript-template-express',
     description: 'Modulo para nodejs',
     image:
@@ -36,6 +38,7 @@ const projects: Project[] = [
     tags: ['nodejs', 'mongodb'],
   },
   {
+    id: 3,
     title: 'express-typescript',
     description: 'Modulo para nodejs',
     image:

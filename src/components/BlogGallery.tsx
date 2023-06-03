@@ -1,8 +1,8 @@
 import type { MarkdownInstance } from 'astro'
 import { Post } from '@/components/types/Post'
 import { BlogCard } from './Blog'
-import { brandColor } from './Shared/Icon'
 import { Card } from './Shared/Card'
+import { Colors } from '@/utils/Colors'
 
 type PostsProps = {
   postList: MarkdownInstance<Post>[]
@@ -15,7 +15,7 @@ const BlogGallery = (props: PostsProps) => {
           <BlogCard
             key={post.url}
             post={post}
-            borderColor={`border-[${brandColor[post.frontmatter.icons[0]]}]`}
+            borderColor={`border-[${Colors[post.frontmatter.icons[0]]}]`}
           />
         ))}
         <Card

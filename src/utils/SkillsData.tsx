@@ -6,24 +6,23 @@ import {
   NodeIcon,
   ExpressIcon,
   MongoIcon,
-  TypeScriptIcon,
   NextIcon,
   AstroIcon,
   PhpIcon,
   PythonIcon,
-  GitHubIcon,
   BashIcon,
   DockerIcon,
   SwaggerIcon,
   AlgoliaIcon,
   StrapiIcon,
 } from '@/components/icons'
+import Icon from '@/components/Shared/Icon/Icon'
 
 const skills: Skill[] = [
   {
     name: 'TypeScript',
     type: 'programación',
-    icon: <TypeScriptIcon />,
+    icon: <Icon name='typescript' />,
     color: '#3178C6',
     borderColor: 'border-[#3178C6]',
   },
@@ -93,7 +92,7 @@ const skills: Skill[] = [
   {
     name: 'GitHub',
     type: 'tools',
-    icon: <GitHubIcon />,
+    icon: <Icon name='github' />,
     color: '#181717',
     borderColor: 'border-[#181717]',
   },

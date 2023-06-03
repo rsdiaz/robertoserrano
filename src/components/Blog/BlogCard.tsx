@@ -6,7 +6,7 @@ import { Post } from '../types/Post'
 
 // Shared imports
 import { Card } from '../Shared/Card'
-import Icon from '../Shared/Icon'
+import Icon from '../Shared/Icon/Icon'
 import classNames from 'classnames'
 import randomColor from '@/utils/ramdomColor'
 

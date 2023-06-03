@@ -11,8 +11,6 @@ import { SkillContent } from './Skills/SkillContent'
 import { PortfolioContent } from './Portfolio/PortfolioContent'
 import { PortfolioCard } from './PortfolioCard'
 import { SmallCard } from './SmallCard'
-import { LinkedInIcon } from './icons/LinkedInIcon'
-import { TwitterIcon } from './icons/TwitterIcon'
 
 export {
   FooterCopyright,
@@ -28,6 +26,4 @@ export {
   PortfolioContent,
   PortfolioCard,
   SmallCard,
-  LinkedInIcon,
-  TwitterIcon,
 }

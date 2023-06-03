@@ -4,4 +4,6 @@ export const Colors = {
   astro: '#FF5D01',
   github: '#181717',
   codepen: '#000000',
+  linkedin: '#0A66C2',
+  twitter: '#1DA1F2',
 }

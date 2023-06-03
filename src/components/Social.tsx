@@ -1,4 +1,3 @@
-import { LinkedInIcon, TwitterIcon } from './icons'
 import { Link } from './Link'
 import Icon from './Shared/Icon/Icon'
 
@@ -20,12 +19,12 @@ const Social = (props: SocialProps) => (
     </li>
     <li>
       <Link href='https://www.linkedin.com/in/roberto-serrano-diaz-grande'>
-        <LinkedInIcon />
+        <Icon name='linkedin' width='1rem' color='currentColor' />
       </Link>
     </li>
     <li>
       <Link href='https://twitter.com/Rovbeat'>
-        <TwitterIcon />
+        <Icon name='twitter' width='1rem' color='currentColor' />
       </Link>
     </li>
   </ul>

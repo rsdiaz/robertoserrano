@@ -2,7 +2,13 @@ import { ComponentPropsWithoutRef, ElementType } from 'react'
 import { Colors } from '@/utils/Colors'
 import { Icons } from '@/utils/Icons'
 
-export type Icons = 'typescript' | 'nodejs' | 'github' | 'codepen'
+export type Icons =
+  | 'typescript'
+  | 'nodejs'
+  | 'github'
+  | 'codepen'
+  | 'linkedin'
+  | 'twitter'
 
 type IconOwnProps = {
   name: Icons

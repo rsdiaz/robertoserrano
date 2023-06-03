@@ -1,5 +1,3 @@
-import { LinkedInIcon } from './LinkedInIcon'
-import { TwitterIcon } from './TwitterIcon'
 import { JavaScriptIcon } from './JavaScriptIcon'
 import { ReactIcon } from './ReactIcon'
 import { NodeIcon } from './NodeIcon'
@@ -16,8 +14,6 @@ import { AlgoliaIcon } from './AlgoliaIcon'
 import { StrapiIcon } from './StrapiIcon'
 
 export {
-  LinkedInIcon,
-  TwitterIcon,
   JavaScriptIcon,
   ReactIcon,
   NodeIcon,

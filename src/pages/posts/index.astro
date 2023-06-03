@@ -21,14 +21,16 @@ const posts = await Astro.glob<Post>('../../posts/*.mdx')
 const tags = getUniqueTags(posts.map((e) => e.frontmatter.tags))
 const title = 'Bienvenidos a mi blog 👋'
 const description =
-  'Apasionado de las tecnologías web, el desarrollo y la seguridad informática. Entusiasta de HTML, CSS, JavaScript, Node. Comparto mi aprendizaje y conocimiento a traves de mi blog en el cual publico artículos sobre desarrollo web y mi día a día tecnológico.'
+  'En este blog, compartiré mis conocimientos y experiencias en el campo del desarrollo web. Desde el front-end hasta el back-end, desde las tecnologías básicas como HTML, CSS y JavaScript, hasta las últimas tendencias y herramientas como React, Node.js, y mucho más. Mi objetivo es proporcionarte información valiosa y aplicable que puedas utilizar en tus propios proyectos.'
 ---
 
-<PageLayout content={{ title: 'Blog', description: 'saaaa' }}>
+<PageLayout content={{ title: 'Blog | robertoserrano.dev', description: 'saaaa' }}>
   <PageHeader title={title} description={description} />
   <section class='md:grid md:grid-cols-3 gap-8'>
     <div class='col-span-2'>
-      <PostsList posts={posts} />
+      <div class="md:grid md:grid-cols-2 gap-6">
+        <PostsList posts={posts} />
+      </div>
     </div>
     <aside>
       <Sidebar tags={tags} />

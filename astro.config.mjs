@@ -9,6 +9,6 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://robertoserrano.dev',
-  base: '/robertoserrano.pro',
+  base: '/robertoserrano',
   integrations: [react(), tailwind(), turbolinks(), partytown(), sitemap(), mdx()],
 })

@@ -12,7 +12,7 @@ import { LastPosts } from '@/partials/LastPosts'
 
 import { AppConfig } from '@/utils/AppConfig'
 import { Post } from '@/components/types/Post'
-// import { Contact } from '@/partials/Contact'
+import { Contact } from '@/partials/Contact'
 
 const posts = await Astro.glob<Post>('../posts/*.mdx')
 
@@ -33,7 +33,7 @@ const { description } = AppConfig
       <Skills client:load />
       <Portfolio client:load />
       <LastPosts postList={posts} />
-      <!-- <Contact /> -->
+      <Contact />
     </main>
     <Footer />
   </body>

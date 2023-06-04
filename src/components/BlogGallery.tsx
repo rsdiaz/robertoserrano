@@ -28,7 +28,7 @@ const BlogGallery = (props: PostsProps) => {
           prev='Portfolio'
           next='Contacto'
           prevHref='#portfolio'
-          nextHref='#blog'
+          nextHref='#contact'
         />
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>

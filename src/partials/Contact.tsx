@@ -11,8 +11,11 @@ const Contact = () => {
             ¿Quieres que hablemos?
           </h2>
           <p className='font-light leading-loose mb-5'>
-            Rellena el formulario de contacto y pronto me pondré en contacto
-            contigo.
+            Puedes contactar conmigo a traves de mis redes sociales, pero si
+            prefieres puedes rellenar el formulario para enviarme un mensaje.
+          </p>
+          <p className='font-light leading-loose mb-5'>
+            Te contestare tan pronto como me sea posible. 😀
           </p>
         </div>
         <Card variant='primary'>

@@ -12,8 +12,9 @@ const SkillContent = () => {
         Mis Skills
       </h2>
       <p className='font-light leading-loose mb-5'>
-        Una lista de lenguajes, frameworks y herramientas que mas estoy
-        utilizando actualmente.
+        Más allá de estas habilidades técnicas, tengo una fuerte capacidad para
+        resolver problemas y siempre estoy buscando maneras de mejorar y
+        expandir mi conjunto de habilidades
       </p>
       <SkillNav skillType={skillType} setSkillType={setSkillType} />
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
